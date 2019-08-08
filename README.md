@@ -1,0 +1,2 @@
+# HardWareInfoAcquire
+hardware acquire
