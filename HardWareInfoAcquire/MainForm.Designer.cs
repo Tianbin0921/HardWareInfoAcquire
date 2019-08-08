@@ -95,6 +95,9 @@
             this.NotifyMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.显示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabpage_temperature = new CCWin.SkinControl.SkinTabPage();
+            this.rdo_manual_adjustment = new CCWin.SkinControl.SkinRadioButton();
+            this.rdo_auto_adjustment = new CCWin.SkinControl.SkinRadioButton();
             this.tabcontrol_menu.SuspendLayout();
             this.tabpage_monitor.SuspendLayout();
             this.tabpage_led.SuspendLayout();
@@ -106,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.skinTrackBar1)).BeginInit();
             this.tabpage_show.SuspendLayout();
             this.NotifyMenu.SuspendLayout();
+            this.tabpage_temperature.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -212,7 +216,7 @@
             // 
             this.rotate_gpu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rotate_gpu.AutoSize = true;
-            this.rotate_gpu.Location = new System.Drawing.Point(117, 169);
+            this.rotate_gpu.Location = new System.Drawing.Point(107, 169);
             this.rotate_gpu.Name = "rotate_gpu";
             this.rotate_gpu.Size = new System.Drawing.Size(18, 17);
             this.rotate_gpu.TabIndex = 11;
@@ -231,7 +235,7 @@
             // 
             this.load_memory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.load_memory.AutoSize = true;
-            this.load_memory.Location = new System.Drawing.Point(200, 169);
+            this.load_memory.Location = new System.Drawing.Point(190, 169);
             this.load_memory.Name = "load_memory";
             this.load_memory.Size = new System.Drawing.Size(18, 17);
             this.load_memory.TabIndex = 13;
@@ -264,11 +268,12 @@
             this.tabcontrol_menu.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
             this.tabcontrol_menu.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
             this.tabcontrol_menu.Controls.Add(this.tabpage_monitor);
+            this.tabcontrol_menu.Controls.Add(this.tabpage_temperature);
             this.tabcontrol_menu.Controls.Add(this.tabpage_led);
             this.tabcontrol_menu.Controls.Add(this.tabpage_show);
             this.tabcontrol_menu.HeadBack = null;
             this.tabcontrol_menu.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.tabcontrol_menu.ItemSize = new System.Drawing.Size(70, 36);
+            this.tabcontrol_menu.ItemSize = new System.Drawing.Size(70, 56);
             this.tabcontrol_menu.Location = new System.Drawing.Point(7, 56);
             this.tabcontrol_menu.Multiline = true;
             this.tabcontrol_menu.Name = "tabcontrol_menu";
@@ -296,9 +301,10 @@
             this.tabpage_monitor.Controls.Add(this.aGauge_gpu);
             this.tabpage_monitor.Controls.Add(this.aGauge_cpu);
             this.tabpage_monitor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabpage_monitor.Location = new System.Drawing.Point(36, 0);
+            this.tabpage_monitor.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabpage_monitor.Location = new System.Drawing.Point(56, 0);
             this.tabpage_monitor.Name = "tabpage_monitor";
-            this.tabpage_monitor.Size = new System.Drawing.Size(697, 490);
+            this.tabpage_monitor.Size = new System.Drawing.Size(677, 490);
             this.tabpage_monitor.TabIndex = 0;
             this.tabpage_monitor.TabItemImage = null;
             this.tabpage_monitor.Text = "监视器";
@@ -623,9 +629,10 @@
             this.tabpage_led.Controls.Add(this.skinGroupBox2);
             this.tabpage_led.Controls.Add(this.skinGroupBox1);
             this.tabpage_led.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabpage_led.Location = new System.Drawing.Point(36, 0);
+            this.tabpage_led.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabpage_led.Location = new System.Drawing.Point(56, 0);
             this.tabpage_led.Name = "tabpage_led";
-            this.tabpage_led.Size = new System.Drawing.Size(697, 490);
+            this.tabpage_led.Size = new System.Drawing.Size(677, 490);
             this.tabpage_led.TabIndex = 1;
             this.tabpage_led.TabItemImage = null;
             this.tabpage_led.Text = "灯带";
@@ -633,7 +640,7 @@
             // skinGroupBox2
             // 
             this.skinGroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox2.BorderColor = System.Drawing.Color.Red;
+            this.skinGroupBox2.BorderColor = System.Drawing.Color.Gray;
             this.skinGroupBox2.Controls.Add(this.skinColorSelectPanel2);
             this.skinGroupBox2.Controls.Add(this.skinTrackBar4);
             this.skinGroupBox2.Controls.Add(this.skinTrackBar3);
@@ -649,7 +656,7 @@
             this.skinGroupBox2.TabIndex = 3;
             this.skinGroupBox2.TabStop = false;
             this.skinGroupBox2.Text = "GPU";
-            this.skinGroupBox2.TitleBorderColor = System.Drawing.Color.Red;
+            this.skinGroupBox2.TitleBorderColor = System.Drawing.Color.Empty;
             this.skinGroupBox2.TitleRectBackColor = System.Drawing.Color.White;
             this.skinGroupBox2.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
             // 
@@ -722,7 +729,7 @@
             // skinGroupBox1
             // 
             this.skinGroupBox1.BackColor = System.Drawing.Color.DimGray;
-            this.skinGroupBox1.BorderColor = System.Drawing.Color.Red;
+            this.skinGroupBox1.BorderColor = System.Drawing.Color.Gray;
             this.skinGroupBox1.Controls.Add(this.skinColorSelectPanel1);
             this.skinGroupBox1.Controls.Add(this.skinTrackBar2);
             this.skinGroupBox1.Controls.Add(this.skinLabel5);
@@ -738,7 +745,7 @@
             this.skinGroupBox1.TabIndex = 2;
             this.skinGroupBox1.TabStop = false;
             this.skinGroupBox1.Text = "CPU";
-            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.Red;
+            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.DarkGray;
             this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.White;
             this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
             // 
@@ -810,7 +817,7 @@
             // 
             // tabpage_show
             // 
-            this.tabpage_show.BackColor = System.Drawing.Color.White;
+            this.tabpage_show.BackColor = System.Drawing.Color.DimGray;
             this.tabpage_show.Controls.Add(this.temperature_cpu);
             this.tabpage_show.Controls.Add(this.load_cpu);
             this.tabpage_show.Controls.Add(this.label1);
@@ -829,9 +836,9 @@
             this.tabpage_show.Controls.Add(this.label5);
             this.tabpage_show.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabpage_show.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabpage_show.Location = new System.Drawing.Point(36, 0);
+            this.tabpage_show.Location = new System.Drawing.Point(56, 0);
             this.tabpage_show.Name = "tabpage_show";
-            this.tabpage_show.Size = new System.Drawing.Size(697, 490);
+            this.tabpage_show.Size = new System.Drawing.Size(677, 490);
             this.tabpage_show.TabIndex = 2;
             this.tabpage_show.TabItemImage = null;
             this.tabpage_show.Text = "显示屏";
@@ -866,6 +873,60 @@
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
+            // tabpage_temperature
+            // 
+            this.tabpage_temperature.BackColor = System.Drawing.Color.White;
+            this.tabpage_temperature.Controls.Add(this.rdo_auto_adjustment);
+            this.tabpage_temperature.Controls.Add(this.rdo_manual_adjustment);
+            this.tabpage_temperature.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabpage_temperature.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabpage_temperature.Location = new System.Drawing.Point(56, 0);
+            this.tabpage_temperature.Name = "tabpage_temperature";
+            this.tabpage_temperature.Size = new System.Drawing.Size(677, 490);
+            this.tabpage_temperature.TabIndex = 3;
+            this.tabpage_temperature.TabItemImage = null;
+            this.tabpage_temperature.Text = "温度管理";
+            // 
+            // rdo_manual_adjustment
+            // 
+            this.rdo_manual_adjustment.AutoSize = true;
+            this.rdo_manual_adjustment.BackColor = System.Drawing.Color.Transparent;
+            this.rdo_manual_adjustment.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.rdo_manual_adjustment.DownBack = null;
+            this.rdo_manual_adjustment.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rdo_manual_adjustment.Location = new System.Drawing.Point(66, 45);
+            this.rdo_manual_adjustment.MouseBack = null;
+            this.rdo_manual_adjustment.Name = "rdo_manual_adjustment";
+            this.rdo_manual_adjustment.NormlBack = null;
+            this.rdo_manual_adjustment.SelectedDownBack = null;
+            this.rdo_manual_adjustment.SelectedMouseBack = null;
+            this.rdo_manual_adjustment.SelectedNormlBack = null;
+            this.rdo_manual_adjustment.Size = new System.Drawing.Size(74, 21);
+            this.rdo_manual_adjustment.TabIndex = 0;
+            this.rdo_manual_adjustment.TabStop = true;
+            this.rdo_manual_adjustment.Text = "手动调节";
+            this.rdo_manual_adjustment.UseVisualStyleBackColor = false;
+            // 
+            // rdo_auto_adjustment
+            // 
+            this.rdo_auto_adjustment.AutoSize = true;
+            this.rdo_auto_adjustment.BackColor = System.Drawing.Color.Transparent;
+            this.rdo_auto_adjustment.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.rdo_auto_adjustment.DownBack = null;
+            this.rdo_auto_adjustment.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rdo_auto_adjustment.Location = new System.Drawing.Point(66, 245);
+            this.rdo_auto_adjustment.MouseBack = null;
+            this.rdo_auto_adjustment.Name = "rdo_auto_adjustment";
+            this.rdo_auto_adjustment.NormlBack = null;
+            this.rdo_auto_adjustment.SelectedDownBack = null;
+            this.rdo_auto_adjustment.SelectedMouseBack = null;
+            this.rdo_auto_adjustment.SelectedNormlBack = null;
+            this.rdo_auto_adjustment.Size = new System.Drawing.Size(74, 21);
+            this.rdo_auto_adjustment.TabIndex = 1;
+            this.rdo_auto_adjustment.TabStop = true;
+            this.rdo_auto_adjustment.Text = "智能调节";
+            this.rdo_auto_adjustment.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -897,6 +958,8 @@
             this.tabpage_show.ResumeLayout(false);
             this.tabpage_show.PerformLayout();
             this.NotifyMenu.ResumeLayout(false);
+            this.tabpage_temperature.ResumeLayout(false);
+            this.tabpage_temperature.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -948,6 +1011,9 @@
         private System.Windows.Forms.ContextMenuStrip NotifyMenu;
         private System.Windows.Forms.ToolStripMenuItem 显示ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
+        private CCWin.SkinControl.SkinTabPage tabpage_temperature;
+        private CCWin.SkinControl.SkinRadioButton rdo_auto_adjustment;
+        private CCWin.SkinControl.SkinRadioButton rdo_manual_adjustment;
     }
 }
 
