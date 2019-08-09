@@ -75,6 +75,22 @@
             this.aGauge_memory = new System.Windows.Forms.AGauge();
             this.aGauge_gpu = new System.Windows.Forms.AGauge();
             this.aGauge_cpu = new System.Windows.Forms.AGauge();
+            this.tabpage_temperature = new CCWin.SkinControl.SkinTabPage();
+            this.skinLabel16 = new CCWin.SkinControl.SkinLabel();
+            this.cmb_mainboard_temp__threshold = new CCWin.SkinControl.SkinComboBox();
+            this.skinLabel15 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel14 = new CCWin.SkinControl.SkinLabel();
+            this.cmb_gpu_temp__threshold = new CCWin.SkinControl.SkinComboBox();
+            this.skinLabel13 = new CCWin.SkinControl.SkinLabel();
+            this.cmb_cpu_temp__threshold = new CCWin.SkinControl.SkinComboBox();
+            this.skinLabel12 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel11 = new CCWin.SkinControl.SkinLabel();
+            this.trb_cpu_fan = new CCWin.SkinControl.SkinTrackBar();
+            this.skinLabel10 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel9 = new CCWin.SkinControl.SkinLabel();
+            this.trb_gpu_fan = new CCWin.SkinControl.SkinTrackBar();
+            this.rdo_auto_adjustment = new CCWin.SkinControl.SkinRadioButton();
+            this.rdo_manual_adjustment = new CCWin.SkinControl.SkinRadioButton();
             this.tabpage_led = new CCWin.SkinControl.SkinTabPage();
             this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
             this.skinColorSelectPanel2 = new CCWin.SkinControl.SkinColorSelectPanel();
@@ -95,11 +111,14 @@
             this.NotifyMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.显示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabpage_temperature = new CCWin.SkinControl.SkinTabPage();
-            this.rdo_manual_adjustment = new CCWin.SkinControl.SkinRadioButton();
-            this.rdo_auto_adjustment = new CCWin.SkinControl.SkinRadioButton();
+            this.skinLabel17 = new CCWin.SkinControl.SkinLabel();
+            this.cmb_hdd_temp_threshold = new CCWin.SkinControl.SkinComboBox();
+            this.skinLabel18 = new CCWin.SkinControl.SkinLabel();
             this.tabcontrol_menu.SuspendLayout();
             this.tabpage_monitor.SuspendLayout();
+            this.tabpage_temperature.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trb_cpu_fan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trb_gpu_fan)).BeginInit();
             this.tabpage_led.SuspendLayout();
             this.skinGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinTrackBar4)).BeginInit();
@@ -109,7 +128,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.skinTrackBar1)).BeginInit();
             this.tabpage_show.SuspendLayout();
             this.NotifyMenu.SuspendLayout();
-            this.tabpage_temperature.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -623,6 +641,248 @@
             this.aGauge_cpu.Value = 0F;
             this.aGauge_cpu.ValueChanged += new System.EventHandler(this.aGauge_cpu_temperature_ValueChanged);
             // 
+            // tabpage_temperature
+            // 
+            this.tabpage_temperature.BackColor = System.Drawing.Color.White;
+            this.tabpage_temperature.Controls.Add(this.skinLabel18);
+            this.tabpage_temperature.Controls.Add(this.cmb_hdd_temp_threshold);
+            this.tabpage_temperature.Controls.Add(this.skinLabel17);
+            this.tabpage_temperature.Controls.Add(this.skinLabel16);
+            this.tabpage_temperature.Controls.Add(this.cmb_mainboard_temp__threshold);
+            this.tabpage_temperature.Controls.Add(this.skinLabel15);
+            this.tabpage_temperature.Controls.Add(this.skinLabel14);
+            this.tabpage_temperature.Controls.Add(this.cmb_gpu_temp__threshold);
+            this.tabpage_temperature.Controls.Add(this.skinLabel13);
+            this.tabpage_temperature.Controls.Add(this.cmb_cpu_temp__threshold);
+            this.tabpage_temperature.Controls.Add(this.skinLabel12);
+            this.tabpage_temperature.Controls.Add(this.skinLabel11);
+            this.tabpage_temperature.Controls.Add(this.trb_cpu_fan);
+            this.tabpage_temperature.Controls.Add(this.skinLabel10);
+            this.tabpage_temperature.Controls.Add(this.skinLabel9);
+            this.tabpage_temperature.Controls.Add(this.trb_gpu_fan);
+            this.tabpage_temperature.Controls.Add(this.rdo_auto_adjustment);
+            this.tabpage_temperature.Controls.Add(this.rdo_manual_adjustment);
+            this.tabpage_temperature.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabpage_temperature.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabpage_temperature.Location = new System.Drawing.Point(56, 0);
+            this.tabpage_temperature.Name = "tabpage_temperature";
+            this.tabpage_temperature.Size = new System.Drawing.Size(677, 490);
+            this.tabpage_temperature.TabIndex = 3;
+            this.tabpage_temperature.TabItemImage = null;
+            this.tabpage_temperature.Text = "温度管理";
+            // 
+            // skinLabel16
+            // 
+            this.skinLabel16.AutoSize = true;
+            this.skinLabel16.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel16.BorderColor = System.Drawing.Color.White;
+            this.skinLabel16.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel16.Location = new System.Drawing.Point(342, 362);
+            this.skinLabel16.Name = "skinLabel16";
+            this.skinLabel16.Size = new System.Drawing.Size(56, 17);
+            this.skinLabel16.TabIndex = 14;
+            this.skinLabel16.Text = "自动调节";
+            // 
+            // cmb_mainboard_temp__threshold
+            // 
+            this.cmb_mainboard_temp__threshold.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_mainboard_temp__threshold.FormattingEnabled = true;
+            this.cmb_mainboard_temp__threshold.Items.AddRange(new object[] {
+            "40℃",
+            "50℃",
+            "60℃",
+            "70℃",
+            "80℃",
+            "90℃",
+            "100℃"});
+            this.cmb_mainboard_temp__threshold.Location = new System.Drawing.Point(240, 358);
+            this.cmb_mainboard_temp__threshold.Name = "cmb_mainboard_temp__threshold";
+            this.cmb_mainboard_temp__threshold.Size = new System.Drawing.Size(96, 24);
+            this.cmb_mainboard_temp__threshold.TabIndex = 13;
+            this.cmb_mainboard_temp__threshold.WaterText = "";
+            // 
+            // skinLabel15
+            // 
+            this.skinLabel15.AutoSize = true;
+            this.skinLabel15.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel15.BorderColor = System.Drawing.Color.White;
+            this.skinLabel15.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel15.Location = new System.Drawing.Point(154, 362);
+            this.skinLabel15.Name = "skinLabel15";
+            this.skinLabel15.Size = new System.Drawing.Size(80, 17);
+            this.skinLabel15.TabIndex = 12;
+            this.skinLabel15.Text = "主板温度超过";
+            // 
+            // skinLabel14
+            // 
+            this.skinLabel14.AutoSize = true;
+            this.skinLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel14.BorderColor = System.Drawing.Color.White;
+            this.skinLabel14.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel14.Location = new System.Drawing.Point(342, 321);
+            this.skinLabel14.Name = "skinLabel14";
+            this.skinLabel14.Size = new System.Drawing.Size(56, 17);
+            this.skinLabel14.TabIndex = 11;
+            this.skinLabel14.Text = "自动调节";
+            // 
+            // cmb_gpu_temp__threshold
+            // 
+            this.cmb_gpu_temp__threshold.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_gpu_temp__threshold.FormattingEnabled = true;
+            this.cmb_gpu_temp__threshold.Items.AddRange(new object[] {
+            "40℃",
+            "50℃",
+            "60℃",
+            "70℃",
+            "80℃",
+            "90℃",
+            "100℃"});
+            this.cmb_gpu_temp__threshold.Location = new System.Drawing.Point(240, 317);
+            this.cmb_gpu_temp__threshold.Name = "cmb_gpu_temp__threshold";
+            this.cmb_gpu_temp__threshold.Size = new System.Drawing.Size(96, 24);
+            this.cmb_gpu_temp__threshold.TabIndex = 10;
+            this.cmb_gpu_temp__threshold.WaterText = "";
+            // 
+            // skinLabel13
+            // 
+            this.skinLabel13.AutoSize = true;
+            this.skinLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel13.BorderColor = System.Drawing.Color.White;
+            this.skinLabel13.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel13.Location = new System.Drawing.Point(155, 321);
+            this.skinLabel13.Name = "skinLabel13";
+            this.skinLabel13.Size = new System.Drawing.Size(81, 17);
+            this.skinLabel13.TabIndex = 9;
+            this.skinLabel13.Text = "GPU温度超过";
+            // 
+            // cmb_cpu_temp__threshold
+            // 
+            this.cmb_cpu_temp__threshold.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_cpu_temp__threshold.FormattingEnabled = true;
+            this.cmb_cpu_temp__threshold.Items.AddRange(new object[] {
+            "40℃",
+            "50℃",
+            "60℃",
+            "70℃",
+            "80℃",
+            "90℃",
+            "100℃"});
+            this.cmb_cpu_temp__threshold.Location = new System.Drawing.Point(240, 276);
+            this.cmb_cpu_temp__threshold.Name = "cmb_cpu_temp__threshold";
+            this.cmb_cpu_temp__threshold.Size = new System.Drawing.Size(96, 24);
+            this.cmb_cpu_temp__threshold.TabIndex = 8;
+            this.cmb_cpu_temp__threshold.WaterText = "";
+            // 
+            // skinLabel12
+            // 
+            this.skinLabel12.AutoSize = true;
+            this.skinLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel12.BorderColor = System.Drawing.Color.White;
+            this.skinLabel12.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel12.Location = new System.Drawing.Point(342, 280);
+            this.skinLabel12.Name = "skinLabel12";
+            this.skinLabel12.Size = new System.Drawing.Size(56, 17);
+            this.skinLabel12.TabIndex = 7;
+            this.skinLabel12.Text = "自动调节";
+            // 
+            // skinLabel11
+            // 
+            this.skinLabel11.AutoSize = true;
+            this.skinLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel11.BorderColor = System.Drawing.Color.White;
+            this.skinLabel11.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel11.Location = new System.Drawing.Point(155, 280);
+            this.skinLabel11.Name = "skinLabel11";
+            this.skinLabel11.Size = new System.Drawing.Size(80, 17);
+            this.skinLabel11.TabIndex = 6;
+            this.skinLabel11.Text = "CPU温度超过";
+            // 
+            // trb_cpu_fan
+            // 
+            this.trb_cpu_fan.BackColor = System.Drawing.Color.Transparent;
+            this.trb_cpu_fan.Bar = null;
+            this.trb_cpu_fan.BarStyle = CCWin.SkinControl.HSLTrackBarStyle.Opacity;
+            this.trb_cpu_fan.Location = new System.Drawing.Point(155, 150);
+            this.trb_cpu_fan.Name = "trb_cpu_fan";
+            this.trb_cpu_fan.Size = new System.Drawing.Size(104, 45);
+            this.trb_cpu_fan.TabIndex = 5;
+            this.trb_cpu_fan.Track = null;
+            // 
+            // skinLabel10
+            // 
+            this.skinLabel10.AutoSize = true;
+            this.skinLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel10.BorderColor = System.Drawing.Color.White;
+            this.skinLabel10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel10.Location = new System.Drawing.Point(83, 164);
+            this.skinLabel10.Name = "skinLabel10";
+            this.skinLabel10.Size = new System.Drawing.Size(56, 17);
+            this.skinLabel10.TabIndex = 4;
+            this.skinLabel10.Text = "CPU Fan";
+            // 
+            // skinLabel9
+            // 
+            this.skinLabel9.AutoSize = true;
+            this.skinLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel9.BorderColor = System.Drawing.Color.White;
+            this.skinLabel9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel9.Location = new System.Drawing.Point(83, 99);
+            this.skinLabel9.Name = "skinLabel9";
+            this.skinLabel9.Size = new System.Drawing.Size(57, 17);
+            this.skinLabel9.TabIndex = 3;
+            this.skinLabel9.Text = "GPU Fan";
+            // 
+            // trb_gpu_fan
+            // 
+            this.trb_gpu_fan.BackColor = System.Drawing.Color.Transparent;
+            this.trb_gpu_fan.Bar = null;
+            this.trb_gpu_fan.BarStyle = CCWin.SkinControl.HSLTrackBarStyle.Opacity;
+            this.trb_gpu_fan.Location = new System.Drawing.Point(155, 85);
+            this.trb_gpu_fan.Name = "trb_gpu_fan";
+            this.trb_gpu_fan.Size = new System.Drawing.Size(104, 45);
+            this.trb_gpu_fan.TabIndex = 2;
+            this.trb_gpu_fan.Track = null;
+            // 
+            // rdo_auto_adjustment
+            // 
+            this.rdo_auto_adjustment.AutoSize = true;
+            this.rdo_auto_adjustment.BackColor = System.Drawing.Color.Transparent;
+            this.rdo_auto_adjustment.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.rdo_auto_adjustment.DownBack = null;
+            this.rdo_auto_adjustment.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rdo_auto_adjustment.Location = new System.Drawing.Point(66, 245);
+            this.rdo_auto_adjustment.MouseBack = null;
+            this.rdo_auto_adjustment.Name = "rdo_auto_adjustment";
+            this.rdo_auto_adjustment.NormlBack = null;
+            this.rdo_auto_adjustment.SelectedDownBack = null;
+            this.rdo_auto_adjustment.SelectedMouseBack = null;
+            this.rdo_auto_adjustment.SelectedNormlBack = null;
+            this.rdo_auto_adjustment.Size = new System.Drawing.Size(74, 21);
+            this.rdo_auto_adjustment.TabIndex = 1;
+            this.rdo_auto_adjustment.TabStop = true;
+            this.rdo_auto_adjustment.Text = "智能调节";
+            this.rdo_auto_adjustment.UseVisualStyleBackColor = false;
+            // 
+            // rdo_manual_adjustment
+            // 
+            this.rdo_manual_adjustment.AutoSize = true;
+            this.rdo_manual_adjustment.BackColor = System.Drawing.Color.Transparent;
+            this.rdo_manual_adjustment.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.rdo_manual_adjustment.DownBack = null;
+            this.rdo_manual_adjustment.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rdo_manual_adjustment.Location = new System.Drawing.Point(66, 45);
+            this.rdo_manual_adjustment.MouseBack = null;
+            this.rdo_manual_adjustment.Name = "rdo_manual_adjustment";
+            this.rdo_manual_adjustment.NormlBack = null;
+            this.rdo_manual_adjustment.SelectedDownBack = null;
+            this.rdo_manual_adjustment.SelectedMouseBack = null;
+            this.rdo_manual_adjustment.SelectedNormlBack = null;
+            this.rdo_manual_adjustment.Size = new System.Drawing.Size(74, 21);
+            this.rdo_manual_adjustment.TabIndex = 0;
+            this.rdo_manual_adjustment.TabStop = true;
+            this.rdo_manual_adjustment.Text = "手动调节";
+            this.rdo_manual_adjustment.UseVisualStyleBackColor = false;
+            // 
             // tabpage_led
             // 
             this.tabpage_led.BackColor = System.Drawing.Color.DimGray;
@@ -873,59 +1133,47 @@
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
-            // tabpage_temperature
+            // skinLabel17
             // 
-            this.tabpage_temperature.BackColor = System.Drawing.Color.White;
-            this.tabpage_temperature.Controls.Add(this.rdo_auto_adjustment);
-            this.tabpage_temperature.Controls.Add(this.rdo_manual_adjustment);
-            this.tabpage_temperature.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabpage_temperature.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabpage_temperature.Location = new System.Drawing.Point(56, 0);
-            this.tabpage_temperature.Name = "tabpage_temperature";
-            this.tabpage_temperature.Size = new System.Drawing.Size(677, 490);
-            this.tabpage_temperature.TabIndex = 3;
-            this.tabpage_temperature.TabItemImage = null;
-            this.tabpage_temperature.Text = "温度管理";
+            this.skinLabel17.AutoSize = true;
+            this.skinLabel17.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel17.BorderColor = System.Drawing.Color.White;
+            this.skinLabel17.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel17.Location = new System.Drawing.Point(155, 405);
+            this.skinLabel17.Name = "skinLabel17";
+            this.skinLabel17.Size = new System.Drawing.Size(80, 17);
+            this.skinLabel17.TabIndex = 15;
+            this.skinLabel17.Text = "硬盘温度超过";
             // 
-            // rdo_manual_adjustment
+            // cmb_hdd_temp_threshold
             // 
-            this.rdo_manual_adjustment.AutoSize = true;
-            this.rdo_manual_adjustment.BackColor = System.Drawing.Color.Transparent;
-            this.rdo_manual_adjustment.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.rdo_manual_adjustment.DownBack = null;
-            this.rdo_manual_adjustment.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rdo_manual_adjustment.Location = new System.Drawing.Point(66, 45);
-            this.rdo_manual_adjustment.MouseBack = null;
-            this.rdo_manual_adjustment.Name = "rdo_manual_adjustment";
-            this.rdo_manual_adjustment.NormlBack = null;
-            this.rdo_manual_adjustment.SelectedDownBack = null;
-            this.rdo_manual_adjustment.SelectedMouseBack = null;
-            this.rdo_manual_adjustment.SelectedNormlBack = null;
-            this.rdo_manual_adjustment.Size = new System.Drawing.Size(74, 21);
-            this.rdo_manual_adjustment.TabIndex = 0;
-            this.rdo_manual_adjustment.TabStop = true;
-            this.rdo_manual_adjustment.Text = "手动调节";
-            this.rdo_manual_adjustment.UseVisualStyleBackColor = false;
+            this.cmb_hdd_temp_threshold.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_hdd_temp_threshold.FormattingEnabled = true;
+            this.cmb_hdd_temp_threshold.Items.AddRange(new object[] {
+            "40℃",
+            "50℃",
+            "60℃",
+            "70℃",
+            "80℃",
+            "90℃",
+            "100℃"});
+            this.cmb_hdd_temp_threshold.Location = new System.Drawing.Point(240, 401);
+            this.cmb_hdd_temp_threshold.Name = "cmb_hdd_temp_threshold";
+            this.cmb_hdd_temp_threshold.Size = new System.Drawing.Size(96, 24);
+            this.cmb_hdd_temp_threshold.TabIndex = 16;
+            this.cmb_hdd_temp_threshold.WaterText = "";
             // 
-            // rdo_auto_adjustment
+            // skinLabel18
             // 
-            this.rdo_auto_adjustment.AutoSize = true;
-            this.rdo_auto_adjustment.BackColor = System.Drawing.Color.Transparent;
-            this.rdo_auto_adjustment.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.rdo_auto_adjustment.DownBack = null;
-            this.rdo_auto_adjustment.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rdo_auto_adjustment.Location = new System.Drawing.Point(66, 245);
-            this.rdo_auto_adjustment.MouseBack = null;
-            this.rdo_auto_adjustment.Name = "rdo_auto_adjustment";
-            this.rdo_auto_adjustment.NormlBack = null;
-            this.rdo_auto_adjustment.SelectedDownBack = null;
-            this.rdo_auto_adjustment.SelectedMouseBack = null;
-            this.rdo_auto_adjustment.SelectedNormlBack = null;
-            this.rdo_auto_adjustment.Size = new System.Drawing.Size(74, 21);
-            this.rdo_auto_adjustment.TabIndex = 1;
-            this.rdo_auto_adjustment.TabStop = true;
-            this.rdo_auto_adjustment.Text = "智能调节";
-            this.rdo_auto_adjustment.UseVisualStyleBackColor = false;
+            this.skinLabel18.AutoSize = true;
+            this.skinLabel18.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel18.BorderColor = System.Drawing.Color.White;
+            this.skinLabel18.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel18.Location = new System.Drawing.Point(342, 405);
+            this.skinLabel18.Name = "skinLabel18";
+            this.skinLabel18.Size = new System.Drawing.Size(56, 17);
+            this.skinLabel18.TabIndex = 17;
+            this.skinLabel18.Text = "自动调节";
             // 
             // MainForm
             // 
@@ -946,6 +1194,10 @@
             this.tabcontrol_menu.ResumeLayout(false);
             this.tabpage_monitor.ResumeLayout(false);
             this.tabpage_monitor.PerformLayout();
+            this.tabpage_temperature.ResumeLayout(false);
+            this.tabpage_temperature.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trb_cpu_fan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trb_gpu_fan)).EndInit();
             this.tabpage_led.ResumeLayout(false);
             this.skinGroupBox2.ResumeLayout(false);
             this.skinGroupBox2.PerformLayout();
@@ -958,8 +1210,6 @@
             this.tabpage_show.ResumeLayout(false);
             this.tabpage_show.PerformLayout();
             this.NotifyMenu.ResumeLayout(false);
-            this.tabpage_temperature.ResumeLayout(false);
-            this.tabpage_temperature.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1014,6 +1264,22 @@
         private CCWin.SkinControl.SkinTabPage tabpage_temperature;
         private CCWin.SkinControl.SkinRadioButton rdo_auto_adjustment;
         private CCWin.SkinControl.SkinRadioButton rdo_manual_adjustment;
+        private CCWin.SkinControl.SkinTrackBar trb_gpu_fan;
+        private CCWin.SkinControl.SkinLabel skinLabel9;
+        private CCWin.SkinControl.SkinLabel skinLabel10;
+        private CCWin.SkinControl.SkinTrackBar trb_cpu_fan;
+        private CCWin.SkinControl.SkinLabel skinLabel11;
+        private CCWin.SkinControl.SkinLabel skinLabel12;
+        private CCWin.SkinControl.SkinComboBox cmb_cpu_temp__threshold;
+        private CCWin.SkinControl.SkinLabel skinLabel13;
+        private CCWin.SkinControl.SkinLabel skinLabel14;
+        private CCWin.SkinControl.SkinComboBox cmb_gpu_temp__threshold;
+        private CCWin.SkinControl.SkinLabel skinLabel15;
+        private CCWin.SkinControl.SkinComboBox cmb_mainboard_temp__threshold;
+        private CCWin.SkinControl.SkinLabel skinLabel16;
+        private CCWin.SkinControl.SkinLabel skinLabel17;
+        private CCWin.SkinControl.SkinComboBox cmb_hdd_temp_threshold;
+        private CCWin.SkinControl.SkinLabel skinLabel18;
     }
 }
 
