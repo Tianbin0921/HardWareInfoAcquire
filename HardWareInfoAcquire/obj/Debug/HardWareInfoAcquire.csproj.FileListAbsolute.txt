@@ -31,3 +31,11 @@ E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWa
 D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\AGauge.dll
 D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\CSkin.dll
 D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\CSkin.xml
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.dll
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\System.Data.SQLite.dll
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\System.Data.SQLite.EF6.dll
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\System.Data.SQLite.Linq.dll
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.xml
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\System.Data.SQLite.xml
