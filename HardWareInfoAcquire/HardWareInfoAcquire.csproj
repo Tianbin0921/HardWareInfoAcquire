@@ -109,6 +109,12 @@
     <Compile Include="DataHelper\DatatableToList.cs" />
     <Compile Include="DataHelper\SQLiteHelper.cs" />
     <Compile Include="Dto\HardwareInfo.cs" />
+    <Compile Include="Forms\TemperatureAdjustForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TemperatureAdjustForm.Designer.cs">
+      <DependentUpon>TemperatureAdjustForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Log\LogHelper.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -127,6 +133,9 @@
     <Compile Include="Util\ByteToAllType.cs" />
     <Compile Include="Util\ConfigurationUtil.cs" />
     <Compile Include="Util\StringUtil.cs" />
+    <EmbeddedResource Include="Forms\TemperatureAdjustForm.resx">
+      <DependentUpon>TemperatureAdjustForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

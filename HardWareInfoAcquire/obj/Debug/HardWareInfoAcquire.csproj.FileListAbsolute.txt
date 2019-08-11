@@ -39,3 +39,12 @@ E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\System
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.xml
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.SqlServer.xml
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\System.Data.SQLite.xml
+D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.dll
+D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\System.Data.SQLite.dll
+D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.xml
+D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\System.Data.SQLite.xml
+D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.TemperatureAdjustForm.resources

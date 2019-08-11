@@ -76,6 +76,13 @@
             this.aGauge_gpu = new System.Windows.Forms.AGauge();
             this.aGauge_cpu = new System.Windows.Forms.AGauge();
             this.tabpage_temperature = new CCWin.SkinControl.SkinTabPage();
+            this.btnAdjust_hdd = new CCWin.SkinControl.SkinButton();
+            this.btnAdjust_mainboard = new CCWin.SkinControl.SkinButton();
+            this.btnAdjust_gpu = new CCWin.SkinControl.SkinButton();
+            this.btnAdjust_cpu = new CCWin.SkinControl.SkinButton();
+            this.skinLabel18 = new CCWin.SkinControl.SkinLabel();
+            this.cmb_hdd_temp_threshold = new CCWin.SkinControl.SkinComboBox();
+            this.skinLabel17 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel16 = new CCWin.SkinControl.SkinLabel();
             this.cmb_mainboard_temp__threshold = new CCWin.SkinControl.SkinComboBox();
             this.skinLabel15 = new CCWin.SkinControl.SkinLabel();
@@ -111,9 +118,6 @@
             this.NotifyMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.显示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.skinLabel17 = new CCWin.SkinControl.SkinLabel();
-            this.cmb_hdd_temp_threshold = new CCWin.SkinControl.SkinComboBox();
-            this.skinLabel18 = new CCWin.SkinControl.SkinLabel();
             this.tabcontrol_menu.SuspendLayout();
             this.tabpage_monitor.SuspendLayout();
             this.tabpage_temperature.SuspendLayout();
@@ -303,14 +307,14 @@
             this.tabcontrol_menu.PageHover = ((System.Drawing.Image)(resources.GetObject("tabcontrol_menu.PageHover")));
             this.tabcontrol_menu.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.tabcontrol_menu.PageNorml = null;
-            this.tabcontrol_menu.SelectedIndex = 1;
+            this.tabcontrol_menu.SelectedIndex = 3;
             this.tabcontrol_menu.Size = new System.Drawing.Size(733, 490);
             this.tabcontrol_menu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabcontrol_menu.TabIndex = 16;
             // 
             // tabpage_monitor
             // 
-            this.tabpage_monitor.BackColor = System.Drawing.Color.DimGray;
+            this.tabpage_monitor.BackColor = System.Drawing.Color.Teal;
             this.tabpage_monitor.Controls.Add(this.skinLabel_mainboard_temperature);
             this.tabpage_monitor.Controls.Add(this.skinLabel3);
             this.tabpage_monitor.Controls.Add(this.skinLabel_disk_temperature);
@@ -644,6 +648,10 @@
             // tabpage_temperature
             // 
             this.tabpage_temperature.BackColor = System.Drawing.Color.White;
+            this.tabpage_temperature.Controls.Add(this.btnAdjust_hdd);
+            this.tabpage_temperature.Controls.Add(this.btnAdjust_mainboard);
+            this.tabpage_temperature.Controls.Add(this.btnAdjust_gpu);
+            this.tabpage_temperature.Controls.Add(this.btnAdjust_cpu);
             this.tabpage_temperature.Controls.Add(this.skinLabel18);
             this.tabpage_temperature.Controls.Add(this.cmb_hdd_temp_threshold);
             this.tabpage_temperature.Controls.Add(this.skinLabel17);
@@ -670,6 +678,104 @@
             this.tabpage_temperature.TabIndex = 3;
             this.tabpage_temperature.TabItemImage = null;
             this.tabpage_temperature.Text = "温度管理";
+            // 
+            // btnAdjust_hdd
+            // 
+            this.btnAdjust_hdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdjust_hdd.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAdjust_hdd.DownBack = null;
+            this.btnAdjust_hdd.Location = new System.Drawing.Point(436, 399);
+            this.btnAdjust_hdd.MouseBack = null;
+            this.btnAdjust_hdd.Name = "btnAdjust_hdd";
+            this.btnAdjust_hdd.NormlBack = null;
+            this.btnAdjust_hdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdjust_hdd.TabIndex = 21;
+            this.btnAdjust_hdd.Text = "调整方案";
+            this.btnAdjust_hdd.UseVisualStyleBackColor = false;
+            // 
+            // btnAdjust_mainboard
+            // 
+            this.btnAdjust_mainboard.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdjust_mainboard.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAdjust_mainboard.DownBack = null;
+            this.btnAdjust_mainboard.Location = new System.Drawing.Point(436, 358);
+            this.btnAdjust_mainboard.MouseBack = null;
+            this.btnAdjust_mainboard.Name = "btnAdjust_mainboard";
+            this.btnAdjust_mainboard.NormlBack = null;
+            this.btnAdjust_mainboard.Size = new System.Drawing.Size(75, 23);
+            this.btnAdjust_mainboard.TabIndex = 20;
+            this.btnAdjust_mainboard.Text = "调整方案";
+            this.btnAdjust_mainboard.UseVisualStyleBackColor = false;
+            // 
+            // btnAdjust_gpu
+            // 
+            this.btnAdjust_gpu.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdjust_gpu.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAdjust_gpu.DownBack = null;
+            this.btnAdjust_gpu.Location = new System.Drawing.Point(436, 318);
+            this.btnAdjust_gpu.MouseBack = null;
+            this.btnAdjust_gpu.Name = "btnAdjust_gpu";
+            this.btnAdjust_gpu.NormlBack = null;
+            this.btnAdjust_gpu.Size = new System.Drawing.Size(75, 23);
+            this.btnAdjust_gpu.TabIndex = 19;
+            this.btnAdjust_gpu.Text = "调整方案";
+            this.btnAdjust_gpu.UseVisualStyleBackColor = false;
+            // 
+            // btnAdjust_cpu
+            // 
+            this.btnAdjust_cpu.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdjust_cpu.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAdjust_cpu.DownBack = null;
+            this.btnAdjust_cpu.Location = new System.Drawing.Point(436, 277);
+            this.btnAdjust_cpu.MouseBack = null;
+            this.btnAdjust_cpu.Name = "btnAdjust_cpu";
+            this.btnAdjust_cpu.NormlBack = null;
+            this.btnAdjust_cpu.Size = new System.Drawing.Size(75, 23);
+            this.btnAdjust_cpu.TabIndex = 18;
+            this.btnAdjust_cpu.Text = "调整方案";
+            this.btnAdjust_cpu.UseVisualStyleBackColor = false;
+            // 
+            // skinLabel18
+            // 
+            this.skinLabel18.AutoSize = true;
+            this.skinLabel18.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel18.BorderColor = System.Drawing.Color.White;
+            this.skinLabel18.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel18.Location = new System.Drawing.Point(342, 405);
+            this.skinLabel18.Name = "skinLabel18";
+            this.skinLabel18.Size = new System.Drawing.Size(56, 17);
+            this.skinLabel18.TabIndex = 17;
+            this.skinLabel18.Text = "自动调节";
+            // 
+            // cmb_hdd_temp_threshold
+            // 
+            this.cmb_hdd_temp_threshold.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_hdd_temp_threshold.FormattingEnabled = true;
+            this.cmb_hdd_temp_threshold.Items.AddRange(new object[] {
+            "40℃",
+            "50℃",
+            "60℃",
+            "70℃",
+            "80℃",
+            "90℃",
+            "100℃"});
+            this.cmb_hdd_temp_threshold.Location = new System.Drawing.Point(240, 401);
+            this.cmb_hdd_temp_threshold.Name = "cmb_hdd_temp_threshold";
+            this.cmb_hdd_temp_threshold.Size = new System.Drawing.Size(96, 24);
+            this.cmb_hdd_temp_threshold.TabIndex = 16;
+            this.cmb_hdd_temp_threshold.WaterText = "";
+            // 
+            // skinLabel17
+            // 
+            this.skinLabel17.AutoSize = true;
+            this.skinLabel17.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel17.BorderColor = System.Drawing.Color.White;
+            this.skinLabel17.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel17.Location = new System.Drawing.Point(155, 405);
+            this.skinLabel17.Name = "skinLabel17";
+            this.skinLabel17.Size = new System.Drawing.Size(80, 17);
+            this.skinLabel17.TabIndex = 15;
+            this.skinLabel17.Text = "硬盘温度超过";
             // 
             // skinLabel16
             // 
@@ -885,7 +991,7 @@
             // 
             // tabpage_led
             // 
-            this.tabpage_led.BackColor = System.Drawing.Color.DimGray;
+            this.tabpage_led.BackColor = System.Drawing.Color.Teal;
             this.tabpage_led.Controls.Add(this.skinGroupBox2);
             this.tabpage_led.Controls.Add(this.skinGroupBox1);
             this.tabpage_led.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -910,7 +1016,7 @@
             this.skinGroupBox2.ForeColor = System.Drawing.Color.Blue;
             this.skinGroupBox2.Location = new System.Drawing.Point(29, 253);
             this.skinGroupBox2.Name = "skinGroupBox2";
-            this.skinGroupBox2.RectBackColor = System.Drawing.Color.DimGray;
+            this.skinGroupBox2.RectBackColor = System.Drawing.Color.Teal;
             this.skinGroupBox2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.skinGroupBox2.Size = new System.Drawing.Size(642, 219);
             this.skinGroupBox2.TabIndex = 3;
@@ -988,7 +1094,7 @@
             // 
             // skinGroupBox1
             // 
-            this.skinGroupBox1.BackColor = System.Drawing.Color.DimGray;
+            this.skinGroupBox1.BackColor = System.Drawing.Color.Teal;
             this.skinGroupBox1.BorderColor = System.Drawing.Color.Gray;
             this.skinGroupBox1.Controls.Add(this.skinColorSelectPanel1);
             this.skinGroupBox1.Controls.Add(this.skinTrackBar2);
@@ -999,7 +1105,7 @@
             this.skinGroupBox1.ForeColor = System.Drawing.Color.Blue;
             this.skinGroupBox1.Location = new System.Drawing.Point(29, 16);
             this.skinGroupBox1.Name = "skinGroupBox1";
-            this.skinGroupBox1.RectBackColor = System.Drawing.Color.DimGray;
+            this.skinGroupBox1.RectBackColor = System.Drawing.Color.Teal;
             this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.skinGroupBox1.Size = new System.Drawing.Size(642, 219);
             this.skinGroupBox1.TabIndex = 2;
@@ -1077,7 +1183,7 @@
             // 
             // tabpage_show
             // 
-            this.tabpage_show.BackColor = System.Drawing.Color.DimGray;
+            this.tabpage_show.BackColor = System.Drawing.Color.Teal;
             this.tabpage_show.Controls.Add(this.temperature_cpu);
             this.tabpage_show.Controls.Add(this.load_cpu);
             this.tabpage_show.Controls.Add(this.label1);
@@ -1133,53 +1239,11 @@
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
-            // skinLabel17
-            // 
-            this.skinLabel17.AutoSize = true;
-            this.skinLabel17.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel17.BorderColor = System.Drawing.Color.White;
-            this.skinLabel17.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel17.Location = new System.Drawing.Point(155, 405);
-            this.skinLabel17.Name = "skinLabel17";
-            this.skinLabel17.Size = new System.Drawing.Size(80, 17);
-            this.skinLabel17.TabIndex = 15;
-            this.skinLabel17.Text = "硬盘温度超过";
-            // 
-            // cmb_hdd_temp_threshold
-            // 
-            this.cmb_hdd_temp_threshold.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmb_hdd_temp_threshold.FormattingEnabled = true;
-            this.cmb_hdd_temp_threshold.Items.AddRange(new object[] {
-            "40℃",
-            "50℃",
-            "60℃",
-            "70℃",
-            "80℃",
-            "90℃",
-            "100℃"});
-            this.cmb_hdd_temp_threshold.Location = new System.Drawing.Point(240, 401);
-            this.cmb_hdd_temp_threshold.Name = "cmb_hdd_temp_threshold";
-            this.cmb_hdd_temp_threshold.Size = new System.Drawing.Size(96, 24);
-            this.cmb_hdd_temp_threshold.TabIndex = 16;
-            this.cmb_hdd_temp_threshold.WaterText = "";
-            // 
-            // skinLabel18
-            // 
-            this.skinLabel18.AutoSize = true;
-            this.skinLabel18.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel18.BorderColor = System.Drawing.Color.White;
-            this.skinLabel18.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel18.Location = new System.Drawing.Point(342, 405);
-            this.skinLabel18.Name = "skinLabel18";
-            this.skinLabel18.Size = new System.Drawing.Size(56, 17);
-            this.skinLabel18.TabIndex = 17;
-            this.skinLabel18.Text = "自动调节";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(759, 553);
             this.ControlBoxActive = System.Drawing.Color.Silver;
             this.Controls.Add(this.tabcontrol_menu);
@@ -1280,6 +1344,10 @@
         private CCWin.SkinControl.SkinLabel skinLabel17;
         private CCWin.SkinControl.SkinComboBox cmb_hdd_temp_threshold;
         private CCWin.SkinControl.SkinLabel skinLabel18;
+        private CCWin.SkinControl.SkinButton btnAdjust_cpu;
+        private CCWin.SkinControl.SkinButton btnAdjust_gpu;
+        private CCWin.SkinControl.SkinButton btnAdjust_hdd;
+        private CCWin.SkinControl.SkinButton btnAdjust_mainboard;
     }
 }
 
