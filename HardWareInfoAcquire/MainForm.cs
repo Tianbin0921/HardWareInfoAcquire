@@ -1,5 +1,6 @@
 ﻿using CCWin;
 using HardWareInfoAcquire.Dto;
+using HardWareInfoAcquire.Forms;
 using HardWareInfoAcquire.Hardware;
 using HardWareInfoAcquire.Log;
 using HardWareInfoAcquire.SerialPortCom;
@@ -128,6 +129,20 @@ namespace HardWareInfoAcquire
 
             GetReceiveThread = new Thread(AcceptData);
             //GetReceiveThread.Start();
+
+            for (int i = 0; i < 1; i++)
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                int index = cpuTempAdjustDataGrid.Rows.Add(row);
+                cpuTempAdjustDataGrid.Rows[index].Cells[0].Value = "40~45℃";
+                cpuTempAdjustDataGrid.Rows[index].Cells[1].Value = "80%";
+                cpuTempAdjustDataGrid.Rows[index].Cells[2].Value = "80%";
+                cpuTempAdjustDataGrid.Rows[index].Cells[3].Value = "17,18,20";
+                cpuTempAdjustDataGrid.Rows[index].Cells[4].Value = "60%";
+                cpuTempAdjustDataGrid.Rows[index].Cells[5].Value = "50%";
+                cpuTempAdjustDataGrid.Rows[index].Cells[6].Value = "available";
+            }
+
         }
 
         private void AcquireHardWareInfo()
@@ -584,6 +599,14 @@ namespace HardWareInfoAcquire
                 this.Dispose();
                 this.Close();
             }
+        }
+
+        private void btnAdd_cpuTempAdjust_Click(object sender, EventArgs e)
+        {
+            TemperatureAdjustForm frm = new TemperatureAdjustForm();
+            frm.MainForm = this;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
         }
     }
 }

@@ -12,9 +12,16 @@ namespace HardWareInfoAcquire.Forms
 {
     public partial class TemperatureAdjustForm : CCSkinMain
     {
+        public MainForm MainForm;
+
         public TemperatureAdjustForm()
         {
             InitializeComponent();
+        }
+
+        private void skinButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
