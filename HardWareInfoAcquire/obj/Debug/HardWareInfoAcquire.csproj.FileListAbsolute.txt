@@ -51,3 +51,4 @@ D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquir
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.TemperatureAdjustForm.resources
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.Form1.resources
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.Form2.resources
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.SensorForm.resources
