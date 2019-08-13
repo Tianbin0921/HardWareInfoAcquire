@@ -80,6 +80,22 @@
             this.aGauge_gpu = new System.Windows.Forms.AGauge();
             this.aGauge_cpu = new System.Windows.Forms.AGauge();
             this.tabpage_temperature = new CCWin.SkinControl.SkinTabPage();
+            this.tabControl_autoAdjust = new CCWin.SkinControl.SkinTabControl();
+            this.tabpage_cpu_auto = new CCWin.SkinControl.SkinTabPage();
+            this.btnModify_cpuTempAdjust = new CCWin.SkinControl.SkinButton();
+            this.btnDel_cpuTempAdjust = new CCWin.SkinControl.SkinButton();
+            this.btnAdd_cpuTempAdjust = new CCWin.SkinControl.SkinButton();
+            this.cpuTempAdjustDataGrid = new CCWin.SkinControl.SkinDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabpage_gpu_auto = new CCWin.SkinControl.SkinTabPage();
+            this.tabpage_board_auto = new CCWin.SkinControl.SkinTabPage();
+            this.tabpage_hdd_auto = new CCWin.SkinControl.SkinTabPage();
             this.skinTrackBar10 = new CCWin.SkinControl.SkinTrackBar();
             this.skinLabel24 = new CCWin.SkinControl.SkinLabel();
             this.skinTrackBar9 = new CCWin.SkinControl.SkinTrackBar();
@@ -118,25 +134,12 @@
             this.NotifyMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.显示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl_autoAdjust = new CCWin.SkinControl.SkinTabControl();
-            this.tabpage_cpu_auto = new CCWin.SkinControl.SkinTabPage();
-            this.tabpage_gpu_auto = new CCWin.SkinControl.SkinTabPage();
-            this.tabpage_board_auto = new CCWin.SkinControl.SkinTabPage();
-            this.tabpage_hdd_auto = new CCWin.SkinControl.SkinTabPage();
-            this.cpuTempAdjustDataGrid = new CCWin.SkinControl.SkinDataGridView();
-            this.btnAdd_cpuTempAdjust = new CCWin.SkinControl.SkinButton();
-            this.btnDel_cpuTempAdjust = new CCWin.SkinControl.SkinButton();
-            this.btnModify_cpuTempAdjust = new CCWin.SkinControl.SkinButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabcontrol_menu.SuspendLayout();
             this.tabpage_monitor.SuspendLayout();
             this.tabpage_temperature.SuspendLayout();
+            this.tabControl_autoAdjust.SuspendLayout();
+            this.tabpage_cpu_auto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpuTempAdjustDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinTrackBar10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinTrackBar9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinTrackBar8)).BeginInit();
@@ -154,9 +157,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.skinTrackBar1)).BeginInit();
             this.tabpage_show.SuspendLayout();
             this.NotifyMenu.SuspendLayout();
-            this.tabControl_autoAdjust.SuspendLayout();
-            this.tabpage_cpu_auto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpuTempAdjustDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -318,6 +318,7 @@
             this.tabcontrol_menu.Controls.Add(this.tabpage_temperature);
             this.tabcontrol_menu.Controls.Add(this.tabpage_led);
             this.tabcontrol_menu.Controls.Add(this.tabpage_show);
+            this.tabcontrol_menu.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabcontrol_menu.HeadBack = null;
             this.tabcontrol_menu.ImgTxtOffset = new System.Drawing.Point(0, 0);
             this.tabcontrol_menu.ItemSize = new System.Drawing.Size(70, 56);
@@ -332,14 +333,15 @@
             this.tabcontrol_menu.PageHover = ((System.Drawing.Image)(resources.GetObject("tabcontrol_menu.PageHover")));
             this.tabcontrol_menu.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.tabcontrol_menu.PageNorml = null;
-            this.tabcontrol_menu.SelectedIndex = 1;
+            this.tabcontrol_menu.SelectedIndex = 0;
             this.tabcontrol_menu.Size = new System.Drawing.Size(733, 490);
             this.tabcontrol_menu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabcontrol_menu.TabIndex = 16;
+            this.tabcontrol_menu.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabcontrol_menu_DrawItem);
             // 
             // tabpage_monitor
             // 
-            this.tabpage_monitor.BackColor = System.Drawing.Color.Teal;
+            this.tabpage_monitor.BackColor = System.Drawing.Color.Azure;
             this.tabpage_monitor.Controls.Add(this.skinLabel_mainboard_temperature);
             this.tabpage_monitor.Controls.Add(this.skinLabel3);
             this.tabpage_monitor.Controls.Add(this.skinLabel_disk_temperature);
@@ -349,6 +351,7 @@
             this.tabpage_monitor.Controls.Add(this.aGauge_cpu);
             this.tabpage_monitor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabpage_monitor.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabpage_monitor.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.tabpage_monitor.Location = new System.Drawing.Point(56, 0);
             this.tabpage_monitor.Name = "tabpage_monitor";
             this.tabpage_monitor.Size = new System.Drawing.Size(677, 490);
@@ -700,6 +703,221 @@
             this.tabpage_temperature.TabIndex = 3;
             this.tabpage_temperature.TabItemImage = null;
             this.tabpage_temperature.Text = "温度管理";
+            // 
+            // tabControl_autoAdjust
+            // 
+            this.tabControl_autoAdjust.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
+            this.tabControl_autoAdjust.BackColor = System.Drawing.Color.Teal;
+            this.tabControl_autoAdjust.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
+            this.tabControl_autoAdjust.Controls.Add(this.tabpage_cpu_auto);
+            this.tabControl_autoAdjust.Controls.Add(this.tabpage_gpu_auto);
+            this.tabControl_autoAdjust.Controls.Add(this.tabpage_board_auto);
+            this.tabControl_autoAdjust.Controls.Add(this.tabpage_hdd_auto);
+            this.tabControl_autoAdjust.HeadBack = null;
+            this.tabControl_autoAdjust.ImgTxtOffset = new System.Drawing.Point(0, 0);
+            this.tabControl_autoAdjust.ItemSize = new System.Drawing.Size(70, 36);
+            this.tabControl_autoAdjust.Location = new System.Drawing.Point(66, 272);
+            this.tabControl_autoAdjust.Name = "tabControl_autoAdjust";
+            this.tabControl_autoAdjust.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageArrowDown")));
+            this.tabControl_autoAdjust.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageArrowHover")));
+            this.tabControl_autoAdjust.PageCloseHover = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageCloseHover")));
+            this.tabControl_autoAdjust.PageCloseNormal = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageCloseNormal")));
+            this.tabControl_autoAdjust.PageDown = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageDown")));
+            this.tabControl_autoAdjust.PageHover = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageHover")));
+            this.tabControl_autoAdjust.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
+            this.tabControl_autoAdjust.PageNorml = null;
+            this.tabControl_autoAdjust.SelectedIndex = 0;
+            this.tabControl_autoAdjust.Size = new System.Drawing.Size(586, 215);
+            this.tabControl_autoAdjust.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl_autoAdjust.TabIndex = 34;
+            // 
+            // tabpage_cpu_auto
+            // 
+            this.tabpage_cpu_auto.BackColor = System.Drawing.Color.DarkCyan;
+            this.tabpage_cpu_auto.Controls.Add(this.btnModify_cpuTempAdjust);
+            this.tabpage_cpu_auto.Controls.Add(this.btnDel_cpuTempAdjust);
+            this.tabpage_cpu_auto.Controls.Add(this.btnAdd_cpuTempAdjust);
+            this.tabpage_cpu_auto.Controls.Add(this.cpuTempAdjustDataGrid);
+            this.tabpage_cpu_auto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabpage_cpu_auto.Location = new System.Drawing.Point(0, 36);
+            this.tabpage_cpu_auto.Name = "tabpage_cpu_auto";
+            this.tabpage_cpu_auto.Size = new System.Drawing.Size(586, 179);
+            this.tabpage_cpu_auto.TabIndex = 0;
+            this.tabpage_cpu_auto.TabItemImage = null;
+            this.tabpage_cpu_auto.Text = "CPU";
+            // 
+            // btnModify_cpuTempAdjust
+            // 
+            this.btnModify_cpuTempAdjust.BackColor = System.Drawing.Color.Transparent;
+            this.btnModify_cpuTempAdjust.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnModify_cpuTempAdjust.DownBack = null;
+            this.btnModify_cpuTempAdjust.Location = new System.Drawing.Point(3, 119);
+            this.btnModify_cpuTempAdjust.MouseBack = null;
+            this.btnModify_cpuTempAdjust.Name = "btnModify_cpuTempAdjust";
+            this.btnModify_cpuTempAdjust.NormlBack = null;
+            this.btnModify_cpuTempAdjust.Size = new System.Drawing.Size(75, 23);
+            this.btnModify_cpuTempAdjust.TabIndex = 3;
+            this.btnModify_cpuTempAdjust.Text = "修改";
+            this.btnModify_cpuTempAdjust.UseVisualStyleBackColor = false;
+            // 
+            // btnDel_cpuTempAdjust
+            // 
+            this.btnDel_cpuTempAdjust.BackColor = System.Drawing.Color.Transparent;
+            this.btnDel_cpuTempAdjust.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnDel_cpuTempAdjust.DownBack = null;
+            this.btnDel_cpuTempAdjust.Location = new System.Drawing.Point(3, 78);
+            this.btnDel_cpuTempAdjust.MouseBack = null;
+            this.btnDel_cpuTempAdjust.Name = "btnDel_cpuTempAdjust";
+            this.btnDel_cpuTempAdjust.NormlBack = null;
+            this.btnDel_cpuTempAdjust.Size = new System.Drawing.Size(75, 23);
+            this.btnDel_cpuTempAdjust.TabIndex = 2;
+            this.btnDel_cpuTempAdjust.Text = "删除";
+            this.btnDel_cpuTempAdjust.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd_cpuTempAdjust
+            // 
+            this.btnAdd_cpuTempAdjust.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd_cpuTempAdjust.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAdd_cpuTempAdjust.DownBack = null;
+            this.btnAdd_cpuTempAdjust.Location = new System.Drawing.Point(3, 35);
+            this.btnAdd_cpuTempAdjust.MouseBack = null;
+            this.btnAdd_cpuTempAdjust.Name = "btnAdd_cpuTempAdjust";
+            this.btnAdd_cpuTempAdjust.NormlBack = null;
+            this.btnAdd_cpuTempAdjust.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd_cpuTempAdjust.TabIndex = 1;
+            this.btnAdd_cpuTempAdjust.Text = "新增";
+            this.btnAdd_cpuTempAdjust.UseVisualStyleBackColor = false;
+            this.btnAdd_cpuTempAdjust.Click += new System.EventHandler(this.btnAdd_cpuTempAdjust_Click);
+            // 
+            // cpuTempAdjustDataGrid
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.cpuTempAdjustDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.cpuTempAdjustDataGrid.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.cpuTempAdjustDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.cpuTempAdjustDataGrid.ColumnFont = null;
+            this.cpuTempAdjustDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cpuTempAdjustDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.cpuTempAdjustDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cpuTempAdjustDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column5,
+            this.Column4,
+            this.Column6,
+            this.Column7});
+            this.cpuTempAdjustDataGrid.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.cpuTempAdjustDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.cpuTempAdjustDataGrid.EnableHeadersVisualStyles = false;
+            this.cpuTempAdjustDataGrid.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.cpuTempAdjustDataGrid.HeadFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cpuTempAdjustDataGrid.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.cpuTempAdjustDataGrid.Location = new System.Drawing.Point(95, 17);
+            this.cpuTempAdjustDataGrid.Name = "cpuTempAdjustDataGrid";
+            this.cpuTempAdjustDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.cpuTempAdjustDataGrid.RowHeadersVisible = false;
+            this.cpuTempAdjustDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.cpuTempAdjustDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.cpuTempAdjustDataGrid.RowTemplate.Height = 23;
+            this.cpuTempAdjustDataGrid.Size = new System.Drawing.Size(483, 142);
+            this.cpuTempAdjustDataGrid.TabIndex = 0;
+            this.cpuTempAdjustDataGrid.TitleBack = null;
+            this.cpuTempAdjustDataGrid.TitleBackColorBegin = System.Drawing.Color.White;
+            this.cpuTempAdjustDataGrid.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Range";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "FanSpeed";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 65;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Pump";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 50;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "LedColor";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 80;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "LedIntensity";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 80;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "LedSpeed";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 70;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "enable";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 60;
+            // 
+            // tabpage_gpu_auto
+            // 
+            this.tabpage_gpu_auto.BackColor = System.Drawing.Color.Silver;
+            this.tabpage_gpu_auto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabpage_gpu_auto.Location = new System.Drawing.Point(0, 36);
+            this.tabpage_gpu_auto.Name = "tabpage_gpu_auto";
+            this.tabpage_gpu_auto.Size = new System.Drawing.Size(586, 179);
+            this.tabpage_gpu_auto.TabIndex = 1;
+            this.tabpage_gpu_auto.TabItemImage = null;
+            this.tabpage_gpu_auto.Text = "GPU";
+            // 
+            // tabpage_board_auto
+            // 
+            this.tabpage_board_auto.BackColor = System.Drawing.Color.RosyBrown;
+            this.tabpage_board_auto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabpage_board_auto.Location = new System.Drawing.Point(0, 36);
+            this.tabpage_board_auto.Name = "tabpage_board_auto";
+            this.tabpage_board_auto.Size = new System.Drawing.Size(586, 179);
+            this.tabpage_board_auto.TabIndex = 2;
+            this.tabpage_board_auto.TabItemImage = null;
+            this.tabpage_board_auto.Text = "MainBoard";
+            // 
+            // tabpage_hdd_auto
+            // 
+            this.tabpage_hdd_auto.BackColor = System.Drawing.Color.DarkRed;
+            this.tabpage_hdd_auto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabpage_hdd_auto.Location = new System.Drawing.Point(0, 36);
+            this.tabpage_hdd_auto.Name = "tabpage_hdd_auto";
+            this.tabpage_hdd_auto.Size = new System.Drawing.Size(586, 179);
+            this.tabpage_hdd_auto.TabIndex = 3;
+            this.tabpage_hdd_auto.TabItemImage = null;
+            this.tabpage_hdd_auto.Text = "HDD";
             // 
             // skinTrackBar10
             // 
@@ -1175,226 +1393,11 @@
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
-            // tabControl_autoAdjust
-            // 
-            this.tabControl_autoAdjust.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
-            this.tabControl_autoAdjust.BackColor = System.Drawing.Color.Teal;
-            this.tabControl_autoAdjust.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
-            this.tabControl_autoAdjust.Controls.Add(this.tabpage_cpu_auto);
-            this.tabControl_autoAdjust.Controls.Add(this.tabpage_gpu_auto);
-            this.tabControl_autoAdjust.Controls.Add(this.tabpage_board_auto);
-            this.tabControl_autoAdjust.Controls.Add(this.tabpage_hdd_auto);
-            this.tabControl_autoAdjust.HeadBack = null;
-            this.tabControl_autoAdjust.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.tabControl_autoAdjust.ItemSize = new System.Drawing.Size(70, 36);
-            this.tabControl_autoAdjust.Location = new System.Drawing.Point(66, 272);
-            this.tabControl_autoAdjust.Name = "tabControl_autoAdjust";
-            this.tabControl_autoAdjust.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageArrowDown")));
-            this.tabControl_autoAdjust.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageArrowHover")));
-            this.tabControl_autoAdjust.PageCloseHover = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageCloseHover")));
-            this.tabControl_autoAdjust.PageCloseNormal = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageCloseNormal")));
-            this.tabControl_autoAdjust.PageDown = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageDown")));
-            this.tabControl_autoAdjust.PageHover = ((System.Drawing.Image)(resources.GetObject("tabControl_autoAdjust.PageHover")));
-            this.tabControl_autoAdjust.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
-            this.tabControl_autoAdjust.PageNorml = null;
-            this.tabControl_autoAdjust.SelectedIndex = 0;
-            this.tabControl_autoAdjust.Size = new System.Drawing.Size(586, 215);
-            this.tabControl_autoAdjust.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl_autoAdjust.TabIndex = 34;
-            // 
-            // tabpage_cpu_auto
-            // 
-            this.tabpage_cpu_auto.BackColor = System.Drawing.Color.DarkCyan;
-            this.tabpage_cpu_auto.Controls.Add(this.btnModify_cpuTempAdjust);
-            this.tabpage_cpu_auto.Controls.Add(this.btnDel_cpuTempAdjust);
-            this.tabpage_cpu_auto.Controls.Add(this.btnAdd_cpuTempAdjust);
-            this.tabpage_cpu_auto.Controls.Add(this.cpuTempAdjustDataGrid);
-            this.tabpage_cpu_auto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabpage_cpu_auto.Location = new System.Drawing.Point(0, 36);
-            this.tabpage_cpu_auto.Name = "tabpage_cpu_auto";
-            this.tabpage_cpu_auto.Size = new System.Drawing.Size(586, 179);
-            this.tabpage_cpu_auto.TabIndex = 0;
-            this.tabpage_cpu_auto.TabItemImage = null;
-            this.tabpage_cpu_auto.Text = "CPU";
-            // 
-            // tabpage_gpu_auto
-            // 
-            this.tabpage_gpu_auto.BackColor = System.Drawing.Color.Silver;
-            this.tabpage_gpu_auto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabpage_gpu_auto.Location = new System.Drawing.Point(0, 36);
-            this.tabpage_gpu_auto.Name = "tabpage_gpu_auto";
-            this.tabpage_gpu_auto.Size = new System.Drawing.Size(586, 179);
-            this.tabpage_gpu_auto.TabIndex = 1;
-            this.tabpage_gpu_auto.TabItemImage = null;
-            this.tabpage_gpu_auto.Text = "GPU";
-            // 
-            // tabpage_board_auto
-            // 
-            this.tabpage_board_auto.BackColor = System.Drawing.Color.RosyBrown;
-            this.tabpage_board_auto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabpage_board_auto.Location = new System.Drawing.Point(0, 36);
-            this.tabpage_board_auto.Name = "tabpage_board_auto";
-            this.tabpage_board_auto.Size = new System.Drawing.Size(586, 179);
-            this.tabpage_board_auto.TabIndex = 2;
-            this.tabpage_board_auto.TabItemImage = null;
-            this.tabpage_board_auto.Text = "MainBoard";
-            // 
-            // tabpage_hdd_auto
-            // 
-            this.tabpage_hdd_auto.BackColor = System.Drawing.Color.DarkRed;
-            this.tabpage_hdd_auto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabpage_hdd_auto.Location = new System.Drawing.Point(0, 36);
-            this.tabpage_hdd_auto.Name = "tabpage_hdd_auto";
-            this.tabpage_hdd_auto.Size = new System.Drawing.Size(586, 179);
-            this.tabpage_hdd_auto.TabIndex = 3;
-            this.tabpage_hdd_auto.TabItemImage = null;
-            this.tabpage_hdd_auto.Text = "HDD";
-            // 
-            // cpuTempAdjustDataGrid
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.cpuTempAdjustDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.cpuTempAdjustDataGrid.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.cpuTempAdjustDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.cpuTempAdjustDataGrid.ColumnFont = null;
-            this.cpuTempAdjustDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cpuTempAdjustDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.cpuTempAdjustDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cpuTempAdjustDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column5,
-            this.Column4,
-            this.Column6,
-            this.Column7});
-            this.cpuTempAdjustDataGrid.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.cpuTempAdjustDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.cpuTempAdjustDataGrid.EnableHeadersVisualStyles = false;
-            this.cpuTempAdjustDataGrid.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.cpuTempAdjustDataGrid.HeadFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cpuTempAdjustDataGrid.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.cpuTempAdjustDataGrid.Location = new System.Drawing.Point(95, 17);
-            this.cpuTempAdjustDataGrid.Name = "cpuTempAdjustDataGrid";
-            this.cpuTempAdjustDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.cpuTempAdjustDataGrid.RowHeadersVisible = false;
-            this.cpuTempAdjustDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.cpuTempAdjustDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.cpuTempAdjustDataGrid.RowTemplate.Height = 23;
-            this.cpuTempAdjustDataGrid.Size = new System.Drawing.Size(483, 142);
-            this.cpuTempAdjustDataGrid.TabIndex = 0;
-            this.cpuTempAdjustDataGrid.TitleBack = null;
-            this.cpuTempAdjustDataGrid.TitleBackColorBegin = System.Drawing.Color.White;
-            this.cpuTempAdjustDataGrid.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
-            // 
-            // btnAdd_cpuTempAdjust
-            // 
-            this.btnAdd_cpuTempAdjust.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd_cpuTempAdjust.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnAdd_cpuTempAdjust.DownBack = null;
-            this.btnAdd_cpuTempAdjust.Location = new System.Drawing.Point(3, 35);
-            this.btnAdd_cpuTempAdjust.MouseBack = null;
-            this.btnAdd_cpuTempAdjust.Name = "btnAdd_cpuTempAdjust";
-            this.btnAdd_cpuTempAdjust.NormlBack = null;
-            this.btnAdd_cpuTempAdjust.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd_cpuTempAdjust.TabIndex = 1;
-            this.btnAdd_cpuTempAdjust.Text = "新增";
-            this.btnAdd_cpuTempAdjust.UseVisualStyleBackColor = false;
-            this.btnAdd_cpuTempAdjust.Click += new System.EventHandler(this.btnAdd_cpuTempAdjust_Click);
-            // 
-            // btnDel_cpuTempAdjust
-            // 
-            this.btnDel_cpuTempAdjust.BackColor = System.Drawing.Color.Transparent;
-            this.btnDel_cpuTempAdjust.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnDel_cpuTempAdjust.DownBack = null;
-            this.btnDel_cpuTempAdjust.Location = new System.Drawing.Point(3, 78);
-            this.btnDel_cpuTempAdjust.MouseBack = null;
-            this.btnDel_cpuTempAdjust.Name = "btnDel_cpuTempAdjust";
-            this.btnDel_cpuTempAdjust.NormlBack = null;
-            this.btnDel_cpuTempAdjust.Size = new System.Drawing.Size(75, 23);
-            this.btnDel_cpuTempAdjust.TabIndex = 2;
-            this.btnDel_cpuTempAdjust.Text = "删除";
-            this.btnDel_cpuTempAdjust.UseVisualStyleBackColor = false;
-            // 
-            // btnModify_cpuTempAdjust
-            // 
-            this.btnModify_cpuTempAdjust.BackColor = System.Drawing.Color.Transparent;
-            this.btnModify_cpuTempAdjust.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnModify_cpuTempAdjust.DownBack = null;
-            this.btnModify_cpuTempAdjust.Location = new System.Drawing.Point(3, 119);
-            this.btnModify_cpuTempAdjust.MouseBack = null;
-            this.btnModify_cpuTempAdjust.Name = "btnModify_cpuTempAdjust";
-            this.btnModify_cpuTempAdjust.NormlBack = null;
-            this.btnModify_cpuTempAdjust.Size = new System.Drawing.Size(75, 23);
-            this.btnModify_cpuTempAdjust.TabIndex = 3;
-            this.btnModify_cpuTempAdjust.Text = "修改";
-            this.btnModify_cpuTempAdjust.UseVisualStyleBackColor = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Range";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 70;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "FanSpeed";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 65;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Pump";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 50;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "LedColor";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "LedIntensity";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 80;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "LedSpeed";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 70;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "enable";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 60;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Teal;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(759, 553);
             this.ControlBoxActive = System.Drawing.Color.Silver;
             this.Controls.Add(this.tabcontrol_menu);
@@ -1411,6 +1414,9 @@
             this.tabpage_monitor.PerformLayout();
             this.tabpage_temperature.ResumeLayout(false);
             this.tabpage_temperature.PerformLayout();
+            this.tabControl_autoAdjust.ResumeLayout(false);
+            this.tabpage_cpu_auto.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cpuTempAdjustDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinTrackBar10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinTrackBar9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinTrackBar8)).EndInit();
@@ -1431,9 +1437,6 @@
             this.tabpage_show.ResumeLayout(false);
             this.tabpage_show.PerformLayout();
             this.NotifyMenu.ResumeLayout(false);
-            this.tabControl_autoAdjust.ResumeLayout(false);
-            this.tabpage_cpu_auto.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cpuTempAdjustDataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }

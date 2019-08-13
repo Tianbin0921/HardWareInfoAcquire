@@ -608,5 +608,28 @@ namespace HardWareInfoAcquire
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.ShowDialog();
         }
+
+        private void tabcontrol_menu_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            //获取TabControl主控件的工作区域
+            Rectangle rec = tabcontrol_menu.ClientRectangle;
+
+            //新建一个StringFormat对象，用于对标签文字的布局设置
+            StringFormat StrFormat = new StringFormat();
+            StrFormat.LineAlignment = StringAlignment.Center;// 设置文字垂直方向居中
+            StrFormat.Alignment = StringAlignment.Center;// 设置文字水平方向居中       
+
+            SolidBrush bruFont = new SolidBrush(Color.FromArgb(217, 54, 26));// 标签字体颜色
+            Font font = new System.Drawing.Font("微软雅黑", 18F);//设置标签字体样式
+
+            for (int i = 0; i < tabcontrol_menu.TabPages.Count; i++)
+            {
+                //获取标签头的工作区域
+                Rectangle recChild = tabcontrol_menu.GetTabRect(i);
+
+                //绘制标签头的文字
+                e.Graphics.DrawString(tabcontrol_menu.TabPages[i].Text, font, bruFont, recChild, StrFormat);
+            }
+        }
     }
 }

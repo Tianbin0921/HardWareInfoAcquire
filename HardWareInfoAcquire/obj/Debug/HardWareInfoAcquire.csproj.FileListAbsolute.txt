@@ -48,3 +48,6 @@ D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.xm
 D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\System.Data.SQLite.xml
 D:\Projects\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.TemperatureAdjustForm.resources
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.TemperatureAdjustForm.resources
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.Form1.resources
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.Form2.resources
