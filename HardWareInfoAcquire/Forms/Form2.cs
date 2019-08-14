@@ -32,8 +32,8 @@ namespace HardWareInfoAcquire.Forms
 
                         SensorForm frm = new SensorForm();
                         frm.TopLevel = false;
-                        //frm.Dock = DockStyle.Fill;
-                        //frm.FormBorderStyle = FormBorderStyle.None;
+                        frm.Dock = DockStyle.Fill;
+                        frm.FormBorderStyle = FormBorderStyle.None;
                         skinPanel1.Controls.Add(frm);
                         frm.Show();
 

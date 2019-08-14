@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Sensor", 26, 26);
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Controllers", 15, 15);
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Fans", 25, 25);
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Outputs", 27, 27);
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Pumps");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("AQ 5", -2, -2, new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Sensor", 26, 26);
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Controllers", 15, 15);
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Fans", 25, 25);
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Outputs", 27, 27);
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Pumps");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("AQ 5", -2, -2, new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.skinSplitContainer1 = new CCWin.SkinControl.SkinSplitContainer();
             this.treeViewMenu = new CCWin.SkinControl.SkinTreeView();
@@ -84,32 +84,32 @@
             this.treeViewMenu.Location = new System.Drawing.Point(0, 0);
             this.treeViewMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.treeViewMenu.Name = "treeViewMenu";
-            treeNode7.ImageIndex = 26;
-            treeNode7.Name = "sensor";
-            treeNode7.SelectedImageIndex = 26;
-            treeNode7.Text = "Sensor";
-            treeNode8.ImageIndex = 15;
-            treeNode8.Name = "节点3";
-            treeNode8.SelectedImageIndex = 15;
-            treeNode8.Text = "Controllers";
-            treeNode9.ImageIndex = 25;
-            treeNode9.Name = "节点4";
-            treeNode9.SelectedImageIndex = 25;
-            treeNode9.Text = "Fans";
-            treeNode10.ImageIndex = 27;
-            treeNode10.Name = "节点0";
-            treeNode10.SelectedImageIndex = 27;
-            treeNode10.Text = "Outputs";
-            treeNode11.ImageKey = "pump.png";
-            treeNode11.Name = "节点1";
-            treeNode11.SelectedImageKey = "pump.png";
-            treeNode11.Text = "Pumps";
-            treeNode12.ImageIndex = -2;
-            treeNode12.Name = "节点0";
-            treeNode12.SelectedImageIndex = -2;
-            treeNode12.Text = "AQ 5";
+            treeNode1.ImageIndex = 26;
+            treeNode1.Name = "sensor";
+            treeNode1.SelectedImageIndex = 26;
+            treeNode1.Text = "Sensor";
+            treeNode2.ImageIndex = 15;
+            treeNode2.Name = "节点3";
+            treeNode2.SelectedImageIndex = 15;
+            treeNode2.Text = "Controllers";
+            treeNode3.ImageIndex = 25;
+            treeNode3.Name = "节点4";
+            treeNode3.SelectedImageIndex = 25;
+            treeNode3.Text = "Fans";
+            treeNode4.ImageIndex = 27;
+            treeNode4.Name = "节点0";
+            treeNode4.SelectedImageIndex = 27;
+            treeNode4.Text = "Outputs";
+            treeNode5.ImageKey = "pump.png";
+            treeNode5.Name = "节点1";
+            treeNode5.SelectedImageKey = "pump.png";
+            treeNode5.Text = "Pumps";
+            treeNode6.ImageIndex = -2;
+            treeNode6.Name = "节点0";
+            treeNode6.SelectedImageIndex = -2;
+            treeNode6.Text = "AQ 5";
             this.treeViewMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode12});
+            treeNode6});
             this.treeViewMenu.SelectedImageIndex = 0;
             this.treeViewMenu.Size = new System.Drawing.Size(195, 507);
             this.treeViewMenu.TabIndex = 0;
@@ -152,10 +152,9 @@
             // 
             this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
             this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinPanel1.DownBack = null;
             this.skinPanel1.Location = new System.Drawing.Point(0, 0);
-            this.skinPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.skinPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.skinPanel1.MouseBack = null;
             this.skinPanel1.Name = "skinPanel1";
             this.skinPanel1.NormlBack = null;

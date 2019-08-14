@@ -52,3 +52,4 @@ E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWa
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.Form1.resources
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.Form2.resources
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.SensorForm.resources
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\Components.DotNetComponents.dll
