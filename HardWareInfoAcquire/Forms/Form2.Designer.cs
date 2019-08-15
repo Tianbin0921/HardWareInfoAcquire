@@ -44,7 +44,7 @@
             this.skinSplitContainer1 = new CCWin.SkinControl.SkinSplitContainer();
             this.treeViewMenu = new CCWin.SkinControl.SkinTreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
+            this.rightPanel = new CCWin.SkinControl.SkinPanel();
             ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer1)).BeginInit();
             this.skinSplitContainer1.Panel1.SuspendLayout();
             this.skinSplitContainer1.Panel2.SuspendLayout();
@@ -68,7 +68,7 @@
             // skinSplitContainer1.Panel2
             // 
             this.skinSplitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))));
-            this.skinSplitContainer1.Panel2.Controls.Add(this.skinPanel1);
+            this.skinSplitContainer1.Panel2.Controls.Add(this.rightPanel);
             this.skinSplitContainer1.Size = new System.Drawing.Size(899, 507);
             this.skinSplitContainer1.SplitterDistance = 195;
             this.skinSplitContainer1.SplitterWidth = 5;
@@ -89,19 +89,19 @@
             treeNode1.SelectedImageIndex = 26;
             treeNode1.Text = "Sensor";
             treeNode2.ImageIndex = 15;
-            treeNode2.Name = "节点3";
+            treeNode2.Name = "controllers";
             treeNode2.SelectedImageIndex = 15;
             treeNode2.Text = "Controllers";
             treeNode3.ImageIndex = 25;
-            treeNode3.Name = "节点4";
+            treeNode3.Name = "fans";
             treeNode3.SelectedImageIndex = 25;
             treeNode3.Text = "Fans";
             treeNode4.ImageIndex = 27;
-            treeNode4.Name = "节点0";
+            treeNode4.Name = "outputs";
             treeNode4.SelectedImageIndex = 27;
             treeNode4.Text = "Outputs";
             treeNode5.ImageKey = "pump.png";
-            treeNode5.Name = "节点1";
+            treeNode5.Name = "pumps";
             treeNode5.SelectedImageKey = "pump.png";
             treeNode5.Text = "Pumps";
             treeNode6.ImageIndex = -2;
@@ -148,18 +148,18 @@
             this.imageList1.Images.SetKeyName(26, "sensor.png");
             this.imageList1.Images.SetKeyName(27, "stecker.png");
             // 
-            // skinPanel1
+            // rightPanel
             // 
-            this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel1.DownBack = null;
-            this.skinPanel1.Location = new System.Drawing.Point(0, 0);
-            this.skinPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.skinPanel1.MouseBack = null;
-            this.skinPanel1.Name = "skinPanel1";
-            this.skinPanel1.NormlBack = null;
-            this.skinPanel1.Size = new System.Drawing.Size(699, 507);
-            this.skinPanel1.TabIndex = 0;
+            this.rightPanel.BackColor = System.Drawing.Color.Transparent;
+            this.rightPanel.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.rightPanel.DownBack = null;
+            this.rightPanel.Location = new System.Drawing.Point(0, 0);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.rightPanel.MouseBack = null;
+            this.rightPanel.Name = "rightPanel";
+            this.rightPanel.NormlBack = null;
+            this.rightPanel.Size = new System.Drawing.Size(699, 507);
+            this.rightPanel.TabIndex = 0;
             // 
             // Form2
             // 
@@ -186,6 +186,6 @@
         private CCWin.SkinControl.SkinSplitContainer skinSplitContainer1;
         private CCWin.SkinControl.SkinTreeView treeViewMenu;
         private System.Windows.Forms.ImageList imageList1;
-        private CCWin.SkinControl.SkinPanel skinPanel1;
+        private CCWin.SkinControl.SkinPanel rightPanel;
     }
 }

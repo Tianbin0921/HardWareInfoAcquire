@@ -22,21 +22,24 @@ namespace HardWareInfoAcquire.Forms
             TreeNode node = treeViewMenu.GetNodeAt(new Point(e.X, e.Y));
             if (node != null)
             {
-                string selectname = node.Name;
-                //CreateFormInstance("HardWareInfoAcquire.Forms.SensorForm", "Sensor", "HardWareInfoAcquire");
-
-                switch(selectname)
+                rightPanel.Controls.Clear();
+                switch (node.Name)
                 {
                     case "sensor":
-                        //ShowForm("HardWareInfoAcquire.Forms.SensorForm");
-
-                        SensorForm frm = new SensorForm();
-                        frm.TopLevel = false;
-                        frm.Dock = DockStyle.Fill;
-                        frm.FormBorderStyle = FormBorderStyle.None;
-                        skinPanel1.Controls.Add(frm);
-                        frm.Show();
-
+                        SensorForm sensorfrm = new SensorForm();
+                        sensorfrm.TopLevel = false;
+                        sensorfrm.Dock = DockStyle.Fill;
+                        sensorfrm.FormBorderStyle = FormBorderStyle.None;
+                        rightPanel.Controls.Add(sensorfrm);
+                        sensorfrm.Show();
+                        break;
+                    case "fans":
+                        FansForm fanfrm = new FansForm();
+                        fanfrm.TopLevel = false;
+                        fanfrm.Dock = DockStyle.Fill;
+                        fanfrm.FormBorderStyle = FormBorderStyle.None;
+                        rightPanel.Controls.Add(fanfrm);
+                        fanfrm.Show();
                         break;
                     default:
                         break;
