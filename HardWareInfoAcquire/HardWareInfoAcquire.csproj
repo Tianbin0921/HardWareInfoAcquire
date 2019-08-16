@@ -229,6 +229,10 @@
   <ItemGroup>
     <None Include="Resources\face_with_thermometer_128px_1214189_easyicon.net.ico" />
     <None Include="Resources\thermometer_128px_1213947_easyicon.net.ico" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\imgBack.png" />
+    <None Include="Resources\imgBack2.png" />
+    <None Include="Resources\minus.png" />
     <Content Include="thermometer_128px_1213947_easyicon.net.ico" />
   </ItemGroup>
   <ItemGroup />
