@@ -132,6 +132,12 @@
     <Compile Include="Forms\FansForm.Designer.cs">
       <DependentUpon>FansForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ControllerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ControllerForm.Designer.cs">
+      <DependentUpon>ControllerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SensorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FansForm.resx">
       <DependentUpon>FansForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ControllerForm.resx">
+      <DependentUpon>ControllerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SensorForm.resx">
       <DependentUpon>SensorForm.cs</DependentUpon>

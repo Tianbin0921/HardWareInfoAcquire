@@ -54,3 +54,4 @@ E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWa
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\bin\Debug\Components.DotNetComponents.dll
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.FansForm.resources
 E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.csprojResolveAssemblyReference.cache
+E:\Projects\Temperature\HardWareInfoAcquire\HardWareInfoAcquire\obj\Debug\HardWareInfoAcquire.Forms.ControllerForm.resources

@@ -41,6 +41,14 @@ namespace HardWareInfoAcquire.Forms
                         rightPanel.Controls.Add(fanfrm);
                         fanfrm.Show();
                         break;
+                    case "controllers":
+                        ControllerForm confrm = new ControllerForm();
+                        confrm.TopLevel = false;
+                        confrm.Dock = DockStyle.Fill;
+                        confrm.FormBorderStyle = FormBorderStyle.None;
+                        rightPanel.Controls.Add(confrm);
+                        confrm.Show();
+                        break;
                     default:
                         break;
                 }

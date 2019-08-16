@@ -13,6 +13,7 @@ namespace HardWareInfoAcquire.Forms
     {
         string[] sensorArr = new string[] { "sensor1", "sensor2" };
         string[] tempArr = new string[] { "21℃", "22℃" };
+        int checkedFan = 0;
 
         public FansForm()
         {
@@ -31,7 +32,10 @@ namespace HardWareInfoAcquire.Forms
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            this.button1.FlatStyle = FlatStyle.Standard;
+            if (checkedFan != 1)
+            {
+                this.button1.FlatStyle = FlatStyle.Standard;
+            }
         }
 
         private void button2_MouseMove(object sender, MouseEventArgs e)
@@ -42,7 +46,10 @@ namespace HardWareInfoAcquire.Forms
 
         private void button2_MouseLeave(object sender, EventArgs e)
         {
-            this.button2.FlatStyle = FlatStyle.Standard;
+            if (checkedFan != 2)
+            {
+                this.button2.FlatStyle = FlatStyle.Standard;
+            }
         }
 
         private void button3_MouseMove(object sender, MouseEventArgs e)
@@ -53,7 +60,10 @@ namespace HardWareInfoAcquire.Forms
 
         private void button3_MouseLeave(object sender, EventArgs e)
         {
-            this.button3.FlatStyle = FlatStyle.Standard;
+            if(checkedFan!=3)
+            {
+                this.button3.FlatStyle = FlatStyle.Standard;
+            }
         }
 
         private void button4_MouseMove(object sender, MouseEventArgs e)
@@ -64,10 +74,45 @@ namespace HardWareInfoAcquire.Forms
 
         private void button4_MouseLeave(object sender, EventArgs e)
         {
-            this.button4.FlatStyle = FlatStyle.Standard;
+            if (checkedFan != 4)
+            {
+                this.button4.FlatStyle = FlatStyle.Standard;
+            }
         }
 
         private void button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            checkedFan = 1;
+            this.button2.FlatStyle = FlatStyle.Standard;
+            this.button3.FlatStyle = FlatStyle.Standard;
+            this.button4.FlatStyle = FlatStyle.Standard;
+        }
+
+        private void button2_MouseDown(object sender, MouseEventArgs e)
+        {
+            checkedFan = 2;
+            this.button1.FlatStyle = FlatStyle.Standard;
+            this.button3.FlatStyle = FlatStyle.Standard;
+            this.button4.FlatStyle = FlatStyle.Standard;
+        }
+
+        private void button3_MouseDown(object sender, MouseEventArgs e)
+        {
+            checkedFan = 3;
+            this.button1.FlatStyle = FlatStyle.Standard;
+            this.button2.FlatStyle = FlatStyle.Standard;
+            this.button4.FlatStyle = FlatStyle.Standard;
+        }
+
+        private void button4_MouseDown(object sender, MouseEventArgs e)
+        {
+            checkedFan = 4;
+            this.button1.FlatStyle = FlatStyle.Standard;
+            this.button2.FlatStyle = FlatStyle.Standard;
+            this.button3.FlatStyle = FlatStyle.Standard;
+        }
+
+        private void button1_MouseMove_1(object sender, MouseEventArgs e)
         {
 
         }
