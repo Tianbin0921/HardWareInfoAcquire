@@ -110,15 +110,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ctrls\OutPutsDataSourceItemCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctrls\OutPutsDataSourceItemCtrl.Designer.cs">
+      <DependentUpon>OutPutsDataSourceItemCtrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataHelper\DataSetToList.cs" />
     <Compile Include="DataHelper\DatatableToList.cs" />
     <Compile Include="DataHelper\SQLiteHelper.cs" />
     <Compile Include="Dto\HardwareInfo.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\ConstantCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ConstantCtrl.Designer.cs">
+      <DependentUpon>ConstantCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OutPutsDataSourceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\OutPutsDataSourceForm.Designer.cs">
+      <DependentUpon>OutPutsDataSourceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ControllerTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ControllerTypeForm.Designer.cs">
+      <DependentUpon>ControllerTypeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form2.cs">
       <SubType>Form</SubType>
@@ -137,6 +155,12 @@
     </Compile>
     <Compile Include="Forms\ControllerForm.Designer.cs">
       <DependentUpon>ControllerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OutputsDstCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\OutputsDstCtrl.Designer.cs">
+      <DependentUpon>OutputsDstCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SensorForm.cs">
       <SubType>Form</SubType>
@@ -168,8 +192,17 @@
     <Compile Include="Util\ByteToAllType.cs" />
     <Compile Include="Util\ConfigurationUtil.cs" />
     <Compile Include="Util\StringUtil.cs" />
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Ctrls\OutPutsDataSourceItemCtrl.resx">
+      <DependentUpon>OutPutsDataSourceItemCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConstantCtrl.resx">
+      <DependentUpon>ConstantCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OutPutsDataSourceForm.resx">
+      <DependentUpon>OutPutsDataSourceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ControllerTypeForm.resx">
+      <DependentUpon>ControllerTypeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -179,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ControllerForm.resx">
       <DependentUpon>ControllerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OutputsDstCtrl.resx">
+      <DependentUpon>OutputsDstCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SensorForm.resx">
       <DependentUpon>SensorForm.cs</DependentUpon>
@@ -229,10 +265,15 @@
   <ItemGroup>
     <None Include="Resources\face_with_thermometer_128px_1214189_easyicon.net.ico" />
     <None Include="Resources\thermometer_128px_1213947_easyicon.net.ico" />
-    <None Include="Resources\add.png" />
     <None Include="Resources\imgBack.png" />
     <None Include="Resources\imgBack2.png" />
     <None Include="Resources\minus.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\add-circular.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\delete-circular.png" />
+    <None Include="Resources\sun.png" />
+    <None Include="Resources\fans.png" />
     <Content Include="thermometer_128px_1213947_easyicon.net.ico" />
   </ItemGroup>
   <ItemGroup />
